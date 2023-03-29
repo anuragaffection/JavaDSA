@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Java DSA Notes</string>
+    <string name="languageName">Language Name</string>
+    <string name="topicsName">Topics Name</string>
+    <string name="languageLogo">Language Log</string>
+    <string name="anuragaffection">Anurag Affection</string>
+    <string name="clickHere">Cliq Here For Notes</string>
 </resources>
