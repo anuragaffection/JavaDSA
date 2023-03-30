@@ -1,12 +1,11 @@
 package com.example.javadsanotes;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Splash extends AppCompatActivity {
 
@@ -16,10 +15,10 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        CardView clickCard;
-        clickCard = findViewById(R.id.clickCard);
+        Button clickHere;
+        clickHere = findViewById(R.id.clickHere);
 
-        clickCard.setOnClickListener(v -> {
+        clickHere.setOnClickListener(v -> {
             Intent iCard;
             iCard = new Intent(Splash.this, MainActivity.class);
             startActivity(iCard);

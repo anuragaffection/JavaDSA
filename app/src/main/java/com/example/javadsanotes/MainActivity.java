@@ -1,11 +1,12 @@
 package com.example.javadsanotes;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerLanguage = findViewById(R.id.recyclerLanguage);
         ArrayList<model> arrLanguage = new ArrayList<>();
 
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerLanguage.setLayoutManager(linearLayoutManager);
+
+
 
         model l1 = new model(R.drawable.language, "Java DSA HandWritten");
         model l2 = new model(R.drawable.language, "Java DSA Book");
@@ -30,11 +35,9 @@ public class MainActivity extends AppCompatActivity {
         arrLanguage.add(l3);
 
         RecycleAdapter recycleAdapter = new RecycleAdapter(this, arrLanguage);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-
-
-        recyclerLanguage.setLayoutManager(linearLayoutManager);
         recyclerLanguage.setAdapter(recycleAdapter);
+
+
 
     }
 }

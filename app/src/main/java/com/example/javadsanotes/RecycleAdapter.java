@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,12 +18,17 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     Context context;
     ArrayList<model> arrLanguage;
 
-    // RecyclerView recyclerLanguage;
+    /*
+      comment int lastPosition = -1;
+      RecyclerView recyclerLanguage;
+    */
+
 
     RecycleAdapter(Context context, ArrayList<model> arrLanguage){
         this.context = context;
         this.arrLanguage = arrLanguage;
     }
+
 
     @NonNull
     @Override
@@ -35,6 +39,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         return new ViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
@@ -42,6 +47,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         holder.languageImage.setImageResource(arrLanguage.get(positionAdapter).img);
         holder.languageName.setText(arrLanguage.get(positionAdapter).name);
     }
+
 
     @Override
     public int getItemCount() {
@@ -52,16 +58,15 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView languageName;
         ImageView languageImage;
-        LinearLayout llLanguage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             languageName = itemView.findViewById(R.id.languageName);
             languageImage = itemView.findViewById(R.id.languageImage);
-            llLanguage = itemView.findViewById(R.id.llLanugage);
 
         }
     }
+
 
 }
