@@ -36,7 +36,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHold
     public void onBindViewHolder(@NonNull ChapterAdapter.ViewHolder holder, int position) {
 
         int positionAdapter = holder.getAdapterPosition();
-        holder.topicsName.setText(arrChapter.get(positionAdapter).name);
+        holder.topicsName.setText(arrChapter.get(positionAdapter).chapter);
     }
 
     @Override
@@ -50,7 +50,6 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             topicsName = itemView.findViewById(R.id.topicsName);
         }
     }

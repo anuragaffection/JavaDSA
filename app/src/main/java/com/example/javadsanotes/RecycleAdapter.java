@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,12 +18,20 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
     Context context;
     ArrayList<model> arrLanguage;
+    ItemClickListener itemClickListener;
+
 
     /*
       comment int lastPosition = -1;
       RecyclerView recyclerLanguage;
     */
 
+
+    RecycleAdapter(Context context, ArrayList<model> arrLanguage, ItemClickListener itemClickListener){
+        this.context = context;
+        this.arrLanguage = arrLanguage;
+        this.itemClickListener = itemClickListener;
+    }
 
     RecycleAdapter(Context context, ArrayList<model> arrLanguage){
         this.context = context;
@@ -46,12 +55,19 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         int positionAdapter = holder.getAdapterPosition();
         holder.languageImage.setImageResource(arrLanguage.get(positionAdapter).img);
         holder.languageName.setText(arrLanguage.get(positionAdapter).name);
+        holder.itemView.setOnClickListener(view ->
+                itemClickListener.onItemClick(arrLanguage.get(positionAdapter)));
     }
 
 
     @Override
     public int getItemCount() {
         return arrLanguage.size();
+    }
+
+
+    public interface ItemClickListener{
+        void onItemClick(model Model);
     }
 
 

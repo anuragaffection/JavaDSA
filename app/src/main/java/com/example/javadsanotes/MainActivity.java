@@ -1,6 +1,7 @@
 package com.example.javadsanotes;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,18 +27,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        model l1 = new model(R.drawable.language, "Java DSA HandWritten");
-        model l2 = new model(R.drawable.language, "Java DSA Book");
-        model l3 = new model(R.drawable.language, "Java DSA Videos ");
+        model l1 = new model(R.drawable.javadsa, " Notes ");
+        model l2 = new model(R.drawable.javadsa, " Book ");
+        model l3 = new model(R.drawable.javadsa, " Videos ");
 
         arrLanguage.add(l1);
         arrLanguage.add(l2);
         arrLanguage.add(l3);
 
-        RecycleAdapter recycleAdapter = new RecycleAdapter(this, arrLanguage);
+        RecycleAdapter recycleAdapter = new RecycleAdapter(this, arrLanguage, Model -> {
+            Intent iSwitch;
+            iSwitch = new Intent(MainActivity.this, Chapter.class);
+            startActivity(iSwitch);
+        });
+
         recyclerLanguage.setAdapter(recycleAdapter);
 
 
-
     }
+
 }
