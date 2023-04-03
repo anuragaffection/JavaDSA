@@ -31,9 +31,16 @@ public class Chapter extends AppCompatActivity {
         model m3 = new model("03. Pre Requisites ");
         model m4 = new model("04. Flowcharts & Pseudo Codes");
         model m5 = new model("05. Mentorship Session");
-        model m6 = new model("06. Variables & Data Types");
-        model m7 = new model("07. Operators in java  ");
-        model m8 = new model("08. Conditional Statements ");
+        model m6 = new model("06. Variables & Data Types - 01");
+        model m7 = new model("06. Variables & Data Types - 02");
+        model m8 = new model("07. Operators");
+        model m9 = new model("08. Conditional Statements");
+        model m10 = new model("09. Loops");
+        model m11 = new model("10. Patterns Basic");
+        model m12 = new model("11. Function - 01");
+        model m13 = new model("11. Function - 02");
+
+
 
         arrChapter.add(m1);
         arrChapter.add(m2);
@@ -43,6 +50,12 @@ public class Chapter extends AppCompatActivity {
         arrChapter.add(m6);
         arrChapter.add(m7);
         arrChapter.add(m8);
+        arrChapter.add(m9);
+        arrChapter.add(m10);
+        arrChapter.add(m11);
+        arrChapter.add(m12);
+        arrChapter.add(m13);
+
 
         ChapterAdapter chapterAdapter = new ChapterAdapter(this, arrChapter);
         chapterRecyclerView.setAdapter(chapterAdapter);
