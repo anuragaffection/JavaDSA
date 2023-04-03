@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class ActMain extends AppCompatActivity {
 
 
     @SuppressLint("MissingInflatedId")
@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         arrLanguage.add(l2);
         arrLanguage.add(l3);
 
-        RecycleAdapter recycleAdapter = new RecycleAdapter(this, arrLanguage, Model -> {
+        AdapterRecycle recycleAdapter = new AdapterRecycle(this, arrLanguage, Model -> {
             Intent iSwitch;
-            iSwitch = new Intent(MainActivity.this, Chapter.class);
+            iSwitch = new Intent(ActMain.this, ActChapter.class);
             startActivity(iSwitch);
         });
 

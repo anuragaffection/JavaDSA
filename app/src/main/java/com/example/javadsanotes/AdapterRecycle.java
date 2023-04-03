@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,26 +13,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder>{
+public class AdapterRecycle extends RecyclerView.Adapter<AdapterRecycle.ViewHolder>{
 
     Context context;
     ArrayList<model> arrLanguage;
     ItemClickListener itemClickListener;
 
 
-    /*
-      comment int lastPosition = -1;
-      RecyclerView recyclerLanguage;
-    */
-
-
-    RecycleAdapter(Context context, ArrayList<model> arrLanguage, ItemClickListener itemClickListener){
+    AdapterRecycle(Context context, ArrayList<model> arrLanguage, ItemClickListener itemClickListener){
         this.context = context;
         this.arrLanguage = arrLanguage;
         this.itemClickListener = itemClickListener;
     }
 
-    RecycleAdapter(Context context, ArrayList<model> arrLanguage){
+    AdapterRecycle(Context context, ArrayList<model> arrLanguage){
         this.context = context;
         this.arrLanguage = arrLanguage;
     }

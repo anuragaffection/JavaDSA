@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class Chapter extends AppCompatActivity {
+public class ActChapter extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -57,7 +57,7 @@ public class Chapter extends AppCompatActivity {
         arrChapter.add(m13);
 
 
-        ChapterAdapter chapterAdapter = new ChapterAdapter(this, arrChapter);
+        AdapterChapter chapterAdapter = new AdapterChapter(this, arrChapter);
         chapterRecyclerView.setAdapter(chapterAdapter);
     }
 }

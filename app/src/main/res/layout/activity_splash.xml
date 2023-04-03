@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Splash">
+    tools:context=".ActSplash">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,23 +20,36 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="12sp"
             >
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40sp"
+                android:text="@string/welcome"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingStart="27sp"
+                android:layout_marginStart="7sp"
+                android:paddingEnd="13sp"
+                tools:ignore="VisualLintButtonSize" />
+
             <ImageView
-                android:layout_width="70sp"
-                android:layout_height="70sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/anuragaffection"
                 android:contentDescription="@string/anuragaffection"
+                android:layout_gravity="center"
 
                 />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/clickHere"
-                android:id="@+id/clickHere"
+                android:layout_marginTop="35sp"
+                android:text="@string/byAA"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingStart="27sp"

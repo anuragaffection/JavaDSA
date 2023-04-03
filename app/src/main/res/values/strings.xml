@@ -5,4 +5,6 @@
     <string name="languageLogo">Language Log</string>
     <string name="anuragaffection">Anurag Affection</string>
     <string name="clickHere">Cliq Here For Notes</string>
+    <string name="welcome">Welcome to Java DSA </string>
+    <string name="byAA">App by Anurag Affection</string>
 </resources>
